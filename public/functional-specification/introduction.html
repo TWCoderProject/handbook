@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+
+    <title>ATP Documentation | Introduction </title>
+    <meta name="description" content>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+
+    <!-- fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,400,500,600,700" rel="stylesheet">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/handbook/style/doc.css">
+
+    <!-- favicon -->
+    <link rel="icon" href="/handbook/images/favicon.ico">
+
+    
+
+  </head>
+  <body>
+
+   <script>window.__INITIAL_STATE__ = {"page":{"title":"Introduction","path":"functional-specification/introduction.html"},"data":{},"config":{"timezone":"UTC","root":"/handbook/","time_format":"HH:mm:ss","theme":"../node_modules/hexo-theme-doc","theme_config":{"swagger_ui":{"version":2,"permalinks":true,"api_explorer":true,"download":"Download specification","show_extensions":false,"deep_linking":true,"display_operation_id":false,"doc_expansion":"none"},"search":{"skip":false,"background":false,"route":"/lunr.json"},"favicon":"images/favicon.ico"}}}</script>
+
+    <div id="react-navigation-root"><div class="doc-navigation" data-reactroot><nav class="doc-navbar"><i class="dc-icon dc-icon--close dc-icon--interactive doc-sidebar-close doc-navbar__sidebar-close doc-navbar__sidebar-close--desktop"></i><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-navbar__sidebar-toggle"></i></nav><nav class="doc-sidebar"><div class="doc-sidebar__vertical-menu"><i class="dc-icon dc-icon--menu dc-icon--interactive doc-sidebar-toggle doc-sidebar-toggle--primary doc-sidebar__vertical-menu__item"></i><i class="dc-icon dc-icon--search dc-icon--interactive doc-sidebar__vertical-menu__item doc-sidebar__vertical-menu__item--primary"></i></div><div class="doc-sidebar-content"><div class="doc-sidebar__search-form"></div><ul class="doc-sidebar-list"></ul></div></nav></div></div>
+    <div class="doc-content">
+  <div class="dc-page">
+    <div class="dc-card">
+      <div id="react-search-results-root"></div>
+      <div id="page-content" class="doc-formatting">
+        <h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><p>ATP Project 全名為 Algorithmic Trading Platform Project ，也就是演算法交易平台專案（簡稱 ATP），此專案目前是 TWCoder 下的系統建置專案。ATP 透過建立一個低延遲、高並行的軟體系統，來協助交易員或金融機構可以更加即時的將金融市場的價格數據，轉換成現今 AI 技術運算所需的格式，並在運算後能快速地於市場進行交易，第 1 節主要會定義本專案的目標與牽涉範圍。</p>
+<h2 id="1-1-ATP-Project-Aims"><a href="#1-1-ATP-Project-Aims" class="headerlink" title="1.1. ATP Project Aims"></a>1.1. ATP Project Aims</h2><p>ATP Project 提供一個系統可以協助交易員或金融機構可以以更方便、更安全且更低延遲的方式，結合最新的人工智慧（AI）演算法進行交易，以下為本專案的目標：</p>
+<ul>
+<li><strong>更方便</strong>：易於整合現今各種資料分析模組、能連 Redis 的程式語言都可以支持</li>
+<li><strong>更安全</strong>：有完整的訂單管理（Order Manager）與價格引擎（Pricing Engine）</li>
+<li><strong>更低延遲</strong>：可以直接進入共享記憶體（shared memoery）取得資料並做交易決策</li>
+</ul>
+<h2 id="1-2-Deliverable-Purpose-Scope-and-Context"><a href="#1-2-Deliverable-Purpose-Scope-and-Context" class="headerlink" title="1.2. Deliverable Purpose, Scope and Context"></a>1.2. Deliverable Purpose, Scope and Context</h2><p>本文件對系統的交付成果的具體情境（Context of the Deliverable）做了功能上的定義，主要分為兩個層次：</p>
+<ul>
+<li>第 3 節定義了整體系統架構在使用上的流程</li>
+<li>第 5 節定義了架構中各個模組的功能與運作方式</li>
+</ul>
+<p>開發人員應以本分文件為基礎，撰寫技術規格（Technical Specification）並實現相對應的功能與模組。</p>
+<h2 id="1-3-Document-Status"><a href="#1-3-Document-Status" class="headerlink" title="1.3. Document Status"></a>1.3. Document Status</h2><p>本文件目前被設定為可被公開讀取（Public），因此可能被外部人士透過網際網路搜尋、檔案共享等方式，獲得 ATP Project 的功能規格與其中細節。</p>
+<h2 id="1-4-Target-Audience"><a href="#1-4-Target-Audience" class="headerlink" title="1.4. Target Audience"></a>1.4. Target Audience</h2><p>本文件主要是提供給有參與 ATP Project 開發、維護與管理的相關人員，因為他們將會實作本規格中的各項功能與模組，並且對於未來有需要使用 AI 進行金融交易的機構與個人產生幫助。</p>
+<h2 id="1-5-Abbreviations-and-General-Terms"><a href="#1-5-Abbreviations-and-General-Terms" class="headerlink" title="1.5. Abbreviations and General Terms"></a>1.5. Abbreviations and General Terms</h2><p>在此定義了與 ATP Project 有關的縮寫、常見術語等。目前尚無定義的縮寫與常見術語。</p>
+<h2 id="1-6-Document-Structure"><a href="#1-6-Document-Structure" class="headerlink" title="1.6. Document Structure"></a>1.6. Document Structure</h2><p>本文件主要分成 6 個章節：</p>
+<ul>
+<li>第 1 節：簡介了 ATP Project 的目標，並說明本文件的主要目的、牽涉範圍、相關情境與提供的對象。</li>
+<li>第 2 節：說明系統的整體設計架構</li>
+<li>第 3 節：從使用者和功能執行兩個角度，描述整個系統是如何運作</li>
+<li>第 4 節：主要是說明客戶需求如何與功能規格一致對應</li>
+<li>第 5 節：詳細的說明了各個功能中的模組如何運作，並且以四個部分建構而成：<ol>
+<li>整體功能描述：描述模組整體的主要功能</li>
+<li>使用案例：詳細說明了各種可能的使用情境</li>
+<li>資料模型概念：提供支持使用者案例的資料模型</li>
+<li>技術規格中需要考慮的參數：包含通用與特定的參數，這將作為技術規格撰寫時的基礎</li>
+</ol>
+</li>
+<li>第 6 節：總結了整個功能規格的重點</li>
+<li>附件 A ：與本文件相關的參考資料</li>
+</ul>
+
+        <div id="react-support-footer-root"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+
+    
+
+    <!-- js vendors -->
+    <script src="//code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/2.1.0/lunr.min.js"></script>
+
+    <!-- js source  -->
+    <script src="/handbook/script/doc.js"></script>
+
+    
+
+  </body>
+</html>

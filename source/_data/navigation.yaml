@@ -1,0 +1,24 @@
+{
+  "logo": {
+    "text": "ATP Documentation",
+    "type": "link",
+    "path": "index.html"
+  },
+  "main": [
+     {
+    {
+      "text": "Uncategorized",
+      "type": "label"
+    },
+    {
+      "text": "UI",
+      "type": "link",
+      "path": "swagger/ui.html"
+    },
+    {
+      "text": "To HTML",
+      "type": "link",
+      "path": "swagger/to-html.html"
+    }
+  ]
+}
